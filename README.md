@@ -1,0 +1,1 @@
+# sag_strike_income_impact
