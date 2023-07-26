@@ -1,5 +1,5 @@
 # SAG-AFTRA Strike Potential Impact on Income Calculator
-The Writers Guild of America (WGA) and the SAG-AFTRA (Screen Actors Guild --  American Federation of Television and Radio Artists) are striking about unfair labor situations in the Hollywood scene. Some actors have cited the lack of residuals as reasons for going on strike, despite appearing on popular TV shows as series regulars or guests.
+The members of SAG-AFTRA (Screen Actors Guild and American Federation of Television and Radio Artists) and their allies are on strike about unfair labor situations in Hollywood. Some actors have cited the lack of residuals as reasons for going on strike; despite appearing on popular TV shows as series regulars or guests, they are being paid pennies.
 
 This project shows how much an actor's finances could be impacted based on their expected work hours, their hourly wage[1], their expected overtime work hours, and their overtime hourly wage[2].
 
