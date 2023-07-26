@@ -4,6 +4,7 @@ The Writers Guild of America (WGA) and the SAG-AFTRA (Screen Actors Guild --  Am
 This project shows how much an actor's finances could be impacted based on their expected work hours, their hourly wage[1], their expected overtime work hours, and their overtime hourly wage[2].
 
 [1] Note: the hourly wage is assumed to be constant for this project
+
 [2] Note: the overtime hourly wage is also assumed to be constant
 
 # Calculator
