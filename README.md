@@ -7,6 +7,16 @@ This project shows how much an actor's finances could be impacted based on their
 
 [2] Note: the overtime hourly wage is also assumed to be constant
 
+# Requirements
+- Python 3
+- Tkinter library
+
+# Instructions
+1. Download `tkinter_sag_strike_calculator.py` file
+2. Open command prompt and go to the directory where the file was downloaded
+3. Run `python tkinter_sag_strike_calculator.py`
+   - Press 'Quit' to quit the program or click on the `X`at the top right of the window
+
 # Calculator
 ![sag_strike_cost_calculator](https://github.com/casychow/sag_strike_income_impact/assets/58012214/6964415b-2d64-4ef4-8063-77cb81573cf9)
 
