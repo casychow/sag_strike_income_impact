@@ -8,7 +8,9 @@
 To-Do:
 - [] insert last month's tax -> get actual pay and %loss
 - [] remove all unnecessary "self."
-- [] make moving table entries easier when adding new features/boxes instead of recalculating all object placement
+- [] make moving table entries easier when adding new features/boxes instead of recalculating all object placement,
+    OR
+    use .grid
 - [] table to insert estimated pay for which dates, taxes, actual pay, % loss, payday
 - [] calculate average tax -> use to tune actual pay and % loss
 """
@@ -87,11 +89,13 @@ class Window():
         """
         Calculate the estimated loss of money for the user based on the following formula.
 
-        Formula = reg_work_hrs * reg_hrly_rate + overtime_hrs * overtime_hrly_rate
+        estimated_pay = reg_work_hrs * reg_hrly_rate + overtime_hrs * overtime_hrly_rate
+        actual_pay = estimated_pay - monthly_deductions
         """
-        money_total = round(float(self.reg_hrs.get()) * float(self.reg_hr_rate.get()) + float(self.over_hrs.get()) * float(self.over_hr_rate.get()), 2)
-        self.answer.config(text="{0}: ${1}".format(self.message, money_total))
-        messagebox.showinfo("Projected Impact", "{0}${1}".format(self.message, money_total))
+        estimated_pay = round(float(self.reg_hrs.get()) * float(self.reg_hr_rate.get()) + float(self.over_hrs.get()) * float(self.over_hr_rate.get()), 2)
+        actual_pay = estimated_pay - round(float(self.monthly_deductions.get()), 2)
+        self.answer.config(text="{0}: ${1}".format(self.message, actual_pay))
+        messagebox.showinfo("Projected Impact", "{0}${1}".format(self.message, actual_pay))
 
     def program_exit(self) -> None:
         """
