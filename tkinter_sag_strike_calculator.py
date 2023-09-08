@@ -4,18 +4,7 @@
 # to input their expected work hours and constant hourly rate to estimate a
 # projected loss of income while protesting unfair labor laws.
 
-"""
-To-Do:
-- [] remove all unnecessary "self."
-- [] make moving table entries easier when adding new features/boxes instead of recalculating all object placement,
-    OR
-    use .grid
-- [] table to insert estimated pay for which dates, taxes, actual pay, % loss, payday
-- [] calculate average tax -> use to tune actual pay and % loss
-"""
-
 import tkinter as tk
-# from tkinter import messagebox
 
 class Window():
     def __init__(self) -> None:
@@ -98,8 +87,6 @@ class Window():
         - Estimated Pay = (Regular Work Hours * Regular Hourly Rate) + (Overtime Hours * Overtime Hourly Rate)
         - % loss = (Estimated Pay - Actual Pay) / Estimated Pay
         """
-        # What if some fields are left blank? - make them equal to 0 if nothing is in there
-
         estimated_pay = round(float(self.reg_hrs_string.get()) * float(self.reg_hr_rate_string.get()) + float(self.over_hrs_string.get()) * float(self.over_hr_rate_string.get()), 2)
         deducted_pay = float(self.pay_deductions_string.get())
         actual_pay = float(self.paid_amount_string.get())
@@ -107,11 +94,9 @@ class Window():
         self.answer.config(text="{} {}".format(self.loss_income_message, actual_pay))
         calculated_info = "Estimated Pay: ${0}\nPay Stub Deductions: ${1}\nActual Pay: ${2}\nPercent Loss: {3}%".format(estimated_pay, deducted_pay, actual_pay, percent_loss)
         
-        final_text = tk.Text(self.window, height = 5, width = 40)
+        final_text = tk.Text(self.window, height=5, width=40)
         final_text.place(x=100, y=300)
         final_text.insert(tk.END, calculated_info)
-
-        # messagebox.showinfo("{0}${1}".format(self.message, actual_pay))
 
     def program_exit(self) -> None:
         """
