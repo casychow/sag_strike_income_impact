@@ -43,6 +43,17 @@ class Window():
         quit_button = tk.Button(self.window, text="Quit", command=self.program_exit)
         quit_button.place(x=185, y=250)
 
+        # Place all objects in appropriate locations in window
+        self.reg_hr_label.place(x=10, y=25)
+        self.reg_hr_entry.place(x=200, y=25)
+        self.reg_hr_rate_label.place(x=10, y=50)
+        self.reg_hr_rate_entry.place(x=200, y=50)
+        self.over_hr_label.place(x=10, y=75)
+        self.over_hr_entry.place(x=200, y=75)
+        self.over_hr_rate_label.place(x=10, y=100)
+        self.over_hr_rate_entry.place(x=200, y=100)
+        self.answer.place(x=200, y=150)
+
     def calculate(self) -> None:
         """
         Calculate the estimated loss of money for the user based on the following formula.
@@ -63,16 +74,6 @@ class Window():
         """
         Runs the program continuously
         """
-        # Place all objects in appropriate locations in window
-        self.reg_hr_label.place(x=10, y=25)
-        self.reg_hr_entry.place(x=200, y=25)
-        self.reg_hr_rate_label.place(x=10, y=50)
-        self.reg_hr_rate_entry.place(x=200, y=50)
-        self.over_hr_label.place(x=10, y=75)
-        self.over_hr_entry.place(x=200, y=75)
-        self.over_hr_rate_label.place(x=10, y=100)
-        self.over_hr_rate_entry.place(x=200, y=100)
-        self.answer.place(x=200, y=150)
         self.window.mainloop()
 
 if __name__ == "__main__":
