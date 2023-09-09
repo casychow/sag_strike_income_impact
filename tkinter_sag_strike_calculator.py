@@ -79,6 +79,9 @@ class Window():
         quit_button = tk.Button(self.window, text="Quit", command=self.program_exit)
         quit_button.place(x=350, y=50)
 
+    def read_string_var(self, input_string: 'tk.StringVar') -> float:
+        return float(input_string.get()) if input_string.get() != "" else 0
+
     def calculate(self) -> None:
         """
         Calculate the estimated loss of money for the user based on the following formula.
@@ -87,9 +90,11 @@ class Window():
         - Estimated Pay = (Regular Work Hours * Regular Hourly Rate) + (Overtime Hours * Overtime Hourly Rate)
         - % loss = (Estimated Pay - Actual Pay) / Estimated Pay
         """
-        estimated_pay = round(float(self.reg_hrs_string.get()) * float(self.reg_hr_rate_string.get()) + float(self.over_hrs_string.get()) * float(self.over_hr_rate_string.get()), 2)
-        deducted_pay = float(self.pay_deductions_string.get())
-        actual_pay = float(self.paid_amount_string.get())
+        estimated_pay = round(self.read_string_var(self.reg_hrs_string) * self.read_string_var(self.reg_hr_rate_string) + \
+                              self.read_string_var(self.over_hrs_string) * self.read_string_var(self.over_hr_rate_string)
+                              , 2)
+        deducted_pay = self.read_string_var(self.pay_deductions_string)
+        actual_pay = self.read_string_var(self.paid_amount_string)
         percent_loss = round(((estimated_pay - actual_pay) / estimated_pay * 100), 2)
         self.answer.config(text="{} {}".format(self.loss_income_message, actual_pay))
         calculated_info = "Estimated Pay: ${0}\nPay Stub Deductions: ${1}\nActual Pay: ${2}\nPercent Loss: {3}%".format(estimated_pay, deducted_pay, actual_pay, percent_loss)
