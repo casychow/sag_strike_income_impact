@@ -33,44 +33,44 @@ class Window():
         - Hourly Rate
         - Expected Overtime Work Hour(s)
         - Overtime Rate
-        - Last month's deductions
+        - Pay deductions
         - Answer
         """
 
         # Show labels and entry boxes
-        self.reg_hr_label = tk.Label(self.window, text="Expected Regular Work Hour(s): ") # Show following "Expected Work Hours" entry box
-        self.reg_hr_entry = tk.Entry(self.window, textvariable=self.reg_hrs_string) # Input expected work hours
+        reg_hr_label = tk.Label(self.window, text="Expected Regular Work Hour(s): ") # Show following "Expected Work Hours" entry box
+        reg_hr_entry = tk.Entry(self.window, textvariable=self.reg_hrs_string) # Input expected work hours
 
-        self.reg_hr_rate_label = tk.Label(self.window, text="Hourly Rate: ") # Show following "Hourly Rate" entry box
-        self.reg_hr_rate_entry = tk.Entry(self.window, textvariable=self.reg_hr_rate_string) # Input hourly work rate
+        reg_hr_rate_label = tk.Label(self.window, text="Hourly Rate: ") # Show following "Hourly Rate" entry box
+        reg_hr_rate_entry = tk.Entry(self.window, textvariable=self.reg_hr_rate_string) # Input hourly work rate
 
-        self.over_hr_label = tk.Label(self.window, text="Expected Overtime Work Hour(s): ") # Show following "Expected Overtime Work Hour(s)" entry box
-        self.over_hr_entry = tk.Entry(self.window, textvariable=self.over_hrs_string) # Input expected overtime work hours
+        over_hr_label = tk.Label(self.window, text="Expected Overtime Work Hour(s): ") # Show following "Expected Overtime Work Hour(s)" entry box
+        over_hr_entry = tk.Entry(self.window, textvariable=self.over_hrs_string) # Input expected overtime work hours
 
-        self.over_hr_rate_label = tk.Label(self.window, text="Overtime Rate: ") # Show following "Overtime Rate" entry box
-        self.over_hr_rate_entry = tk.Entry(self.window, textvariable=self.over_hr_rate_string) # Input hourly overtime work rate
+        over_hr_rate_label = tk.Label(self.window, text="Overtime Rate: ") # Show following "Overtime Rate" entry box
+        over_hr_rate_entry = tk.Entry(self.window, textvariable=self.over_hr_rate_string) # Input hourly overtime work rate
 
-        self.pay_deduction_label = tk.Label(self.window, text="Pay Deduction: ") # Show following "Pay Deduction" entry box
-        self.pay_deduction_entry = tk.Entry(self.window, textvariable=self.pay_deductions_string) # Input last pay stub's deductions (from tax, 401k contribution, etc)
+        pay_deduction_label = tk.Label(self.window, text="Pay Deduction: ") # Show following "Pay Deduction" entry box
+        pay_deduction_entry = tk.Entry(self.window, textvariable=self.pay_deductions_string) # Input last pay stub's deductions (from tax, 401k contribution, etc)
 
-        self.paid_amount_label = tk.Label(self.window, text="Actual Pay: ")
-        self.paid_amount_entry = tk.Entry(self.window, textvariable=self.paid_amount_string) # Input last pay stub's final paid amount
+        paid_amount_label = tk.Label(self.window, text="Actual Pay: ")
+        paid_amount_entry = tk.Entry(self.window, textvariable=self.paid_amount_string) # Input last pay stub's final paid amount
 
         self.answer = tk.Label(self.window, text="{0} $0.0".format(self.loss_income_message)) # Show following total expected losses
 
         # Place all objects in appropriate locations in window
-        self.reg_hr_label.place(x=10, y=25)
-        self.reg_hr_entry.place(x=200, y=25)
-        self.reg_hr_rate_label.place(x=10, y=50)
-        self.reg_hr_rate_entry.place(x=200, y=50)
-        self.over_hr_label.place(x=10, y=75)
-        self.over_hr_entry.place(x=200, y=75)
-        self.over_hr_rate_label.place(x=10, y=100)
-        self.over_hr_rate_entry.place(x=200, y=100)
-        self.pay_deduction_label.place(x=10, y=125)
-        self.pay_deduction_entry.place(x=200, y=125)
-        self.paid_amount_label.place(x=10, y=150)
-        self.paid_amount_entry.place(x=200, y=150)
+        reg_hr_label.place(x=10, y=25)
+        reg_hr_entry.place(x=200, y=25)
+        reg_hr_rate_label.place(x=10, y=50)
+        reg_hr_rate_entry.place(x=200, y=50)
+        over_hr_label.place(x=10, y=75)
+        over_hr_entry.place(x=200, y=75)
+        over_hr_rate_label.place(x=10, y=100)
+        over_hr_rate_entry.place(x=200, y=100)
+        pay_deduction_label.place(x=10, y=125)
+        pay_deduction_entry.place(x=200, y=125)
+        paid_amount_label.place(x=10, y=150)
+        paid_amount_entry.place(x=200, y=150)
         self.answer.place(x=100, y=250)
 
         # Initialize and place calculate and quit buttons

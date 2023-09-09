@@ -27,7 +27,6 @@ This project shows how much an actor's finances could be impacted based on their
 ![sag_strike_cost_calculator_output_v0_1](https://github.com/casychow/sag_strike_income_impact/blob/main/pictures/sag_strike_cost_calculator_output_v0_1.png)
 
 # To-Do:
-- [ ] remove all unnecessary "self." in \_\_init\_\_()
 - [ ] make all fields in calculate() non mandatory - if fields are left blank, make them equal to 0
 - [ ] make moving table entries easier when adding new features/boxes instead of recalculating all object placement, OR use .grid
 - [ ] table to insert estimated pay for which dates, taxes, actual pay, % loss, payday
