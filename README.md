@@ -28,5 +28,11 @@ This project shows how much an actor's finances could be impacted based on their
 
 # To-Do:
 - [ ] make moving table entries easier when adding new features/boxes instead of recalculating all object placement, OR use .grid
+- [ ] allow different tabs of program
+   - [ ] data from previous tab should be there when tabs change - aka, save all data
 - [ ] table to insert estimated pay for which dates, taxes, actual pay, % loss, payday
+   - [ ] make this on another tab of the project
+- [ ] export to csv file
+- [ ] import from csv file
 - [ ] calculate average tax -> use to tune actual pay and % loss
+- [ ] another section: budget for living expenses (eg. rent, food) and port data from previous section (eg. actual pay)
